@@ -1,0 +1,1 @@
+import Link from 'next/link'; export default function P(){return <div className='space-y-3'><h1 className='text-2xl font-bold'>설비업체·보일러업체 도매관</h1><p>설비업체 인증 후 도매가를 확인할 수 있습니다.</p><Link href='/business/signup' className='btn'>도매회원 가입</Link></div>}

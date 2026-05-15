@@ -1,0 +1,1 @@
+export default function P(){return <div className='card'>community 페이지</div>}

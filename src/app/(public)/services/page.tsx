@@ -1,0 +1,1 @@
+import { SimpleForm } from '@/components/simple-form'; export default function P(){return <SimpleForm title='/services' />}
