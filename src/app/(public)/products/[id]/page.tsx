@@ -1,0 +1,2 @@
+import { products } from '@/lib/mock-data';
+export default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;const p=products.find(x=>x.id===id);if(!p)return <p>상품 없음</p>;return <div className='space-y-2'><h1 className='text-2xl font-bold'>{p.name}</h1><p>소비자가: {p.publicPrice.toLocaleString()}원</p><p className='text-blue-700'>도매회원가: 승인 회원 전용</p><a className='inline-block bg-green-600 text-white px-4 py-2 rounded' href={p.smartstoreUrl}>스마트스토어에서 구매하기</a></div>}
