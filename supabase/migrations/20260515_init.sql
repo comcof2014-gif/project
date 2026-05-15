@@ -10,6 +10,17 @@ create table if not exists installation_requests (id uuid primary key default ge
 create table if not exists bulk_quote_requests (id uuid primary key default gen_random_uuid(), requester_type text not null, customer_name text not null, company_name text, phone text not null, email text, desired_products jsonb default '[]'::jsonb, quantity int default 1, message text, status text default 'submitted', created_at timestamptz default now(), updated_at timestamptz default now());
 create table if not exists notification_logs (id uuid primary key default gen_random_uuid(), recipient_name text, recipient_phone text, channel text, template_key text, message text, status text default 'created', related_type text, related_id uuid, created_at timestamptz default now());
 alter table products enable row level security;
+alter table bulk_quote_requests enable row level security;
+alter table notification_logs enable row level security;
 create policy "public read active products" on products for select using (is_active = true);
 alter table installation_requests enable row level security;
-create policy "public insert installation request" on installation_requests for insert with check (true);
+create policy "public insert installation request" on installation_requests
+for insert
+to anon, authenticated
+with check (
+  status = '설치중개 신청됨'
+  and privacy_consent = true
+  and created_at is not null
+  and updated_at is not null
+  and created_at = updated_at
+);
