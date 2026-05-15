@@ -1,0 +1,1 @@
+export default function P(){return <div className='card'>관리자 화면</div>}

@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Page(){return <div className='space-y-6'><h1 className='text-3xl font-bold'>보일러 구매 고객에게 설치중개 무료</h1><p>수도권 우선 빠른 설치 매칭 · 설비업체 도매가 · 설치 후 사후관리</p><div className='flex flex-wrap gap-2'>{[['/installation/request','무료 설치중개 신청'],['/products','보일러 상품 보기'],['/business/signup','설비업체 도매회원 가입'],['/installer/signup','설치기사 파트너 가입']].map(([h,t])=><Link key={h} className='btn' href={h}>{t}</Link>)}</div></div>}

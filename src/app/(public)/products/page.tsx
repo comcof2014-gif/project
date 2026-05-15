@@ -1,0 +1,1 @@
+import {products} from '@/lib/mock'; import Link from 'next/link'; export default function P(){return <div className='grid gap-3'>{products.map(p=><div key={p.id} className='card'><h2 className='font-semibold'>{p.name}</h2><p>{p.publicPrice.toLocaleString()}원</p><Link className='btn-secondary mt-2' href={`/products/${p.id}`}>상세보기</Link></div>)}</div>}

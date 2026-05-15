@@ -1,0 +1,1 @@
+export default function P(){return <div className='card'>준비 중</div>}
