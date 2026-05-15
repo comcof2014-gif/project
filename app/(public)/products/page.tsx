@@ -1,0 +1,2 @@
+import Link from 'next/link'; import { products } from '@/lib/mock-data';
+export default function P(){return <div className='space-y-4'><h1 className='text-2xl font-bold'>상품 목록</h1>{products.map(p=><article key={p.id} className='bg-white border rounded p-3'><h2 className='font-semibold'>{p.name}</h2><p>{p.short}</p><p>일반가 {p.publicPrice.toLocaleString()}원</p><Link href={`/products/${p.id}`} className='text-blue-700'>상세보기</Link></article>)}</div>}

@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Home(){return <section className='space-y-6'><h1 className='text-3xl font-bold'>보일러 구매 고객에게 설치중개 무료</h1><p>수도권 우선 빠른 설치 매칭 · 설비업체 도매가 · 설치 후 사후관리까지 연결</p><div className='grid grid-cols-2 gap-3'>{[['/installation/request','무료 설치중개 신청'],['/products','보일러 상품 보기'],['/business/signup','설비업체 도매회원 가입'],['/installer/signup','설치기사 파트너 가입']].map(([h,t])=><Link key={h} href={h} className='rounded bg-slate-900 text-white p-3 text-center'>{t}</Link>)}</div></section>}

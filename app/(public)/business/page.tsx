@@ -1,0 +1,1 @@
+export default function P(){return <div><h1 className='text-2xl font-bold'>설비업체/보일러업체 도매 안내</h1><p>인증 후 도매가를 확인할 수 있습니다.</p></div>}

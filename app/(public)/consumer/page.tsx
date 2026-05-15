@@ -1,0 +1,1 @@
+export default function P(){return <div><h1 className='text-2xl font-bold'>일반 고객 안내</h1><p>회원가입 없이 설치중개를 신청하세요.</p></div>}

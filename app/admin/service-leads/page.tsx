@@ -1,0 +1,1 @@
+export default function Page(){return <div><h1 className='text-2xl font-bold'>/admin/service-leads</h1><p>운영 페이지</p></div>}
